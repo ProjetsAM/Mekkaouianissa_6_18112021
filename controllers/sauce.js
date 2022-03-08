@@ -1,4 +1,4 @@
-// j'importe les npm nécessaires 
+// J'importe les npm nécessaires 
 const Sauce = require("../models/sauce");
 // fs veut dire file-system, c'est ce qui nous permet de
 // modifier et supprimer un fichier

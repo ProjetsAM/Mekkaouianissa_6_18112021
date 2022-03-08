@@ -1,4 +1,4 @@
-//import nécessaires
+//Import nécessaires
 // pour crypter les informations
 const bcrypt = require("bcrypt"); // chiffrage du mot de passe
 // pour créer des token introuvables et aléatoires
