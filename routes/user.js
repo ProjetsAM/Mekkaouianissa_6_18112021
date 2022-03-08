@@ -9,7 +9,7 @@ const validPassword = require('../middleware/password');
 
 // les routes pour créer un compte et se connecter au compte
 // routes POST car le front-end envoi l'adresse mail et mdp
-// (adresse indiquée = le segment final, le reste de l'adresse est déclaré dans appli express)
+// (adresse indiquée = le segment final, le reste de l'adresse est déclaré dans l'application express)
 router.post("/signup", validPassword, userCtrl.signup);
 router.post("/login", userCtrl.login);
 
