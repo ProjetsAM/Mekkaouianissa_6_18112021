@@ -1,6 +1,6 @@
 // Importation d'express pour créer des applis web avec Node
 const express = require('express');
-// Pour intéragir avec la base de données mongoDB
+// pour intéragir avec la base de données mongoDB
 const mongoose = require("mongoose");
 // pour protéger les informations de connexion vers la base de données
 require("dotenv").config();

@@ -1,6 +1,6 @@
 // import express
 const express = require("express");
-// La fonction Router d'express permet de créer des routes individuelles 
+// la fonction Router d'express permet de créer des routes individuelles 
 // pour créer des objets router
 const router = express.Router();
 

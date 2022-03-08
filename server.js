@@ -1,4 +1,4 @@
-//pour protéger les informations de connexion vers la BDD MongoDB
+//Pour protéger les informations de connexion vers la BDD MongoDB
 require("dotenv").config();
 
 // import package http de node
