@@ -1,4 +1,4 @@
-// import mongoose, facilite les interactions avec la base de donnée
+// Import mongoose, facilite les interactions avec la base de donnée
 const mongoose = require("mongoose");
 
 

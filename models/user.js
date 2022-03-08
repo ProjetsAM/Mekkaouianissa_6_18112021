@@ -1,4 +1,4 @@
-// On importe Mongoose
+// on importe Mongoose
 const mongoose = require ('mongoose');
 // import de l'unique validator
 const uniqueValidator = require("mongoose-unique-validator");

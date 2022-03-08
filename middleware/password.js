@@ -1,4 +1,4 @@
-// j'importe le schema de password
+// J'importe le schema de password
 const pwdSchema = require("../models/password");
 
 // je vérifie que le password respecte le schema

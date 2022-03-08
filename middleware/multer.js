@@ -10,7 +10,7 @@ const MIME_TYPES = {
   "image/png": "png",
 };
 
-// on enregistre les images téléchargées par le user dans le disc
+// On enregistre les images téléchargées par le user dans le disc
 // la config de multer nécessite deux arguments : destination + filename prenant prenant 3 params chacun
 const storage = multer.diskStorage({
   // la destination

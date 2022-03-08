@@ -2,7 +2,7 @@
 // pour créer des token aléatoires et uniques pour la connexion
 const jwt = require("jsonwebtoken");
 
-// pour protéger les informations de connexion vers la BDD
+// Pour protéger les informations de connexion vers la BDD
  require("dotenv").config();
 
 // j'exporte le module de token

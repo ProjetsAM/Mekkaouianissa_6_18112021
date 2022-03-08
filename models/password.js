@@ -1,4 +1,4 @@
-// pour valider certains critères sur le mot de passe
+// Pour valider certains critères sur le mot de passe
 const pwdValidator = require("password-validator");
 
 // critères pour le mot de passe
