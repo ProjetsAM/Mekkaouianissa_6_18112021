@@ -35,7 +35,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // "*" permet d'accéder a l'API depuis n'importe quelle origine
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content, Accept, Content-Type, Autorization"
+    "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
   ); // Autorisation d'utiliser certains headers sur l'objet requête
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -51,13 +51,13 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // protection de l'appli de certaines vulnerabilités en protégeant les en-têtes
-// app.use(helmet());
+app.use(helmet());
 
 // Nettoyage des données user pour éviter des injections dans la base de données
 app.use(sanitize());
 
 // configuration des routes d'API
- //app.use("/images", express.static(path.join(__dirname, "images")));
+ app.use("/images", express.static(path.join(__dirname, "images")));
  app.use("/api/auth", userRoutes);
  app.use("/api/sauces", sauceRoutes);
 
