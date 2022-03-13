@@ -73,7 +73,9 @@ exports.login = (req, res, next) => {
             ),
           });
         })
+         // message erreur code 500 : erreur serveur
         .catch((error) => res.status(500).json({ error }));
     })
+     // message erreur code 500 : erreur serveur
     .catch((error) => res.status(500).json({ error }));
 };    

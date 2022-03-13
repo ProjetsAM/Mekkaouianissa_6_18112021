@@ -11,7 +11,6 @@ exports.createSauce = (req, res, next) => {
     const sauce = new Sauce({
       // on récupère toutes les infos du body grâce à cette fonction ...spread
       ...sauceObject,
-      //on récupère dynamiquement l'URL de l'image dans un AltGr + 7
       /*    ${req.protocol} = http ou https
             ${req.get('host')} = host du serveur (ex: localhost)
             /images/ = dossier images
@@ -141,5 +140,6 @@ exports.likeSauce = (req, res, next) => {
         .then(() => res.status(200).json({message: "La sauce a bien été notée !"}))
         .catch(error => res.status(400).json({error}));
     })
+     // message erreur code 500 : erreur serveur
     .catch(error => res.status(500).json({error}));
 };

@@ -47,8 +47,7 @@ const errorHandler = (error) => {
 //on passe l'application express au serveur
 const server = http.createServer(app);
 
-/* écouteur d'évènements, consigne(mentionne) le port ou le canal nommé sur lequel
- le serveur s'exécute dans la console*/
+
 server.on('error', errorHandler);
 server.on('listening', () => {
   const address = server.address();

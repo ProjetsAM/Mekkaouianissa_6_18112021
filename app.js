@@ -30,7 +30,7 @@ const app = express();
 
 // Avant la route d'API, on ajoute la fonction (middleware) des headers permettant
 // aux deux ports front et back de communiquer entre eux
-// CORS (Communication localhost 3000 et 4200)permettre l'accès à l'API depuis n'importe quelle origine
+// CORS (Communication front et back)permettre l'accès à l'API depuis n'importe quelle origine
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // "*" permet d'accéder a l'API depuis n'importe quelle origine
   res.setHeader(
