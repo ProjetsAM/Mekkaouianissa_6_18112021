@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 // importation du "model" de création utilisateur
 const User = require("../models/user");
 
-//infrastructure necessaire pour les routes d'authentification
+//infrastructure nécessaire pour les routes d'authentification
 // fonction signup pour l'enregistrement de nouveaux utilisateurs
 exports.signup = (req, res, next) => {
   bcrypt
