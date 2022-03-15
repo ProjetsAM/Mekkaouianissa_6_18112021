@@ -18,7 +18,7 @@ exports.createSauce = (req, res, next) => {
       */
       imageUrl: `${req.protocol}://${req.get("host")}/images/${req.file.filename}`,
       likes: 0, // départ des likes à 0
-      dislikes: 0, // départ des dilikes à 0
+      dislikes: 0, // départ des dislikes à 0
     });
     sauce
       .save() // sauvegarder la sauce dans la BDD

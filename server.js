@@ -55,8 +55,7 @@ server.on('listening', () => {
   console.log('Listening on ' + bind);
 });
 
-// configuration du serveur pour qu'il écoute
-// Un écouteur d'évènements est également enregistré, mentionnant le port 
-// ou le canal nommé sur lequel le serveur s'exécute dans la console.
+/* configuration du serveur pour qu'il écoute mentionnant le port 
+ou le canal nommé sur lequel le serveur s'exécute dans la console.*/
 server.listen(port);
 
