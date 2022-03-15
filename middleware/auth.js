@@ -3,7 +3,7 @@
 const jwt = require("jsonwebtoken");
 
 // Pour protéger les informations de connexion vers la BDD
- require("dotenv").config();
+require("dotenv").config();
 
 // j'exporte le module de token
 module.exports = (req, res, next) => {

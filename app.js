@@ -5,11 +5,11 @@ const mongoose = require("mongoose");
 // pour protéger les informations de connexion vers la base de données
 require("dotenv").config();
 // pour pouvoir travailler avec les chemins des fichiers
- const path = require("path");
+const path = require("path");
 // pour sécuriser les en-tête http de l'application express
- const helmet = require("helmet");
+const helmet = require("helmet");
 // pour nettoyer les données fournies par l'utilisateur pour empêcher l'injection d'opérateur MongoDB.
- const sanitize = require("express-mongo-sanitize");
+const sanitize = require("express-mongo-sanitize");
 
 // pour les routes vers l'utilisateur et les sauces
 const userRoutes = require("./routes/user");
