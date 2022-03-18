@@ -6,6 +6,9 @@ const bcrypt = require("bcrypt"); // chiffrage du mot de passe
 const jwt = require("jsonwebtoken");
 // importation du "model" de création utilisateur
 const User = require("../models/user");
+// Pour protéger les informations de connexion vers la BDD
+require("dotenv").config();
+
 
 //infrastructure nécessaire pour les routes d'authentification
 // fonction signup pour l'enregistrement de nouveaux utilisateurs
