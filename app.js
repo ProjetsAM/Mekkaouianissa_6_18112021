@@ -23,7 +23,7 @@ mongoose.connect(process.env.DB_CODE,
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
-// je fais appel au module Express avec sa fonction
+// je fais appel au module Express 
 // le mot-clé app fait souvent référence au module express
 // on peut utiliser un autre nom, mais c'est la convention
 const app = express();
@@ -44,12 +44,10 @@ app.use((req, res, next) => {
   next(); // passe l'exécution au middleware suivant
 });
 
-// je récupère le body en front sur l'objet request
-// je parse le corps de la requête en objet json utilisable
-// bodyParser est automatiquement intégré dans la dernière version
-// d'Express, donc inutile de l'installer à part
-// (Pour gérer la requête Post venant de l'appli front, on a besoin d'en extraire le corps JSON)
-// (Pour ça on a juste besoin d'un middle mis a dispo par Express :)
+
+
+// Pour gérer la requête Post venant de l'appli front, on a besoin d'en extraire le corps JSON
+// middleware mis a dispo par Express :
 app.use(express.json());
 
 // protection de l'appli de certaines vulnerabilités en protégeant les en-têtes
@@ -58,9 +56,12 @@ app.use(helmet());
 // Nettoyage des données user pour éviter des injections dans la base de données
 app.use(sanitize());
 
-// configuration des routes d'API
+
+// configuration des routes d'API attendue par le front-end
+
 // indique à Express qu'il faut gérer la ressource images de manière statique 
  app.use("/images", express.static(path.join(__dirname, "images")));
+
  app.use("/api/auth", userRoutes);
  app.use("/api/sauces", sauceRoutes);
 

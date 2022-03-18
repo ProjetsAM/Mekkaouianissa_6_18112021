@@ -1,18 +1,19 @@
 //Configuration protégeant les routes en vérifiant l'authentification avant envoi des requêtes
-// pour créer des token aléatoires et uniques pour la connexion
+// pour créer des tokens aléatoires et uniques pour la connexion
 const jwt = require("jsonwebtoken");
 
 // Pour protéger les informations de connexion vers la BDD
 require("dotenv").config();
 
 // j'exporte le module de token
+// middleware a appliquer à nos routes sauces à proteger
 module.exports = (req, res, next) => {
   try {
     // récupérer le token dans le header autorisation, le split
     // et récupérer le deuxième élément du tableau renvoyé
     const token = req.headers.authorization.split(" ")[1];
     // décoder le token en le vérifiant
-    const decodedToken = jwt.verify(token, "RANDOM_TOKEN_SECRET");
+    const decodedToken = jwt.verify(token, process.env.SECRET_TOKEN);
     // extraire le userId grace au token
     const userId = decodedToken.userId;
     // si on a un userId dans le corps de la requête

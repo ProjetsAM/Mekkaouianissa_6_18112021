@@ -1,4 +1,4 @@
-// J'importe les npm nécessaires 
+// Import du modèle sauce 
 const Sauce = require("../models/sauce");
 // fs veut dire file-system, c'est ce qui nous permet de
 // modifier et supprimer un fichier
@@ -99,6 +99,7 @@ exports.deleteSauce = (req, res, next) => {
 };
 
 /// LIKE OU DISLIKE UNE SAUCE //
+// export de la fonction like
 exports.likeSauce = (req, res, next) => {
   // on récupère l'id du user, l'id de la sauce et le like.
   const userId = req.body.userId;
@@ -114,15 +115,14 @@ exports.likeSauce = (req, res, next) => {
         likes: 0,
         dislikes: 0,
       };
-      // on essaie plusieurs scénarios possibles avec la loop switch
       switch (like) {
-        case 1: // on push si le user fait un like
+        case 1: //  push si le user fait un like
         values.usersLiked.push(userId);
           break;
-        case -1: // on push si le user fait un dislike
+        case -1: // push si le user fait un dislike
         values.usersDisliked.push(userId);
           break;
-        case 0: // c'est la valeur par défaut, zéro like/dislike
+        case 0: //valeur par défaut, zéro like/dislike
           if (values.usersLiked.includes(userId)) { // si le user annule son like
             const index = values.usersLiked.indexOf(userId);
             values.usersLiked.splice(index, 1);

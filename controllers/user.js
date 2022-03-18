@@ -66,7 +66,7 @@ exports.login = (req, res, next) => {
               /* ID de l'user en tant que données à encoder dans le token, pour être sûre
               que la requete correspond bien à l'userId*/
               { userId: user._id },
-              "RANDOM_TOKEN_SECRET", // avec une clé secrète pour l'encodage
+              process.env.SECRET_TOKEN, // avec une clé secrète pour l'encodage
               { expiresIn: "24h" } /* expiration du token qui est valide 24h sinon
                l'user doit se reconnecter*/
               // On renvoie le token au front avec notre réponse 
